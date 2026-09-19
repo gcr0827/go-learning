@@ -1,3 +1,11 @@
+# 构建缓存与产物
 .gocache/
 .gopath/
 *.exe
+bin/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.md
