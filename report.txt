@@ -1,0 +1,28 @@
+=== TIME ===
+Sat Sep 19 18:53:52 CST 2026
+=== PWD ===
+/home/gcr/go-learning
+=== GIT ===
+## main...origin/main
+57c921f docs: 简历与 JD 分析等文档
+0c306f5 init: go-learning workspace
+=== GO ===
+go version go1.26.5 linux/amd64
+=== DOCKER ===
+no docker in wsl
+=== TREE ===
+total 88
+drwxr-xr-x  10 gcr gcr  4096 Sep 19 16:23 .
+drwxr-x---   7 gcr gcr  4096 Sep 19 18:53 ..
+drwxr-xr-x   7 gcr gcr  4096 Sep 19 18:53 .git
+-rw-r--r--   1 gcr gcr    88 Sep 19 18:52 .gitignore
+drwxr-xr-x 258 gcr gcr  4096 Sep 18 15:00 .gocache
+-rwxr-xr-x   1 gcr gcr 20504 Sep 18 15:12 PLAN-2026-10-Go求职冲刺.md
+-rwxr-xr-x   1 gcr gcr  8095 Sep 18 15:12 W1-打卡表与简历自检.md
+drwxr-xr-x   3 gcr gcr  4096 Sep 18 15:00 day1
+drwxr-xr-x   4 gcr gcr  4096 Sep 18 15:00 day2
+drwxr-xr-x   3 gcr gcr  4096 Sep 18 15:00 day3
+drwxr-xr-x   3 gcr gcr  4096 Sep 18 15:00 day4
+drwxr-xr-x   2 gcr gcr  4096 Sep 18 15:00 notes
+drwxr-xr-x   3 gcr gcr  4096 Sep 18 15:31 playground
+-rwxr-xr-x   1 gcr gcr 11836 Sep 18 14:56 环境搭建-记录.md

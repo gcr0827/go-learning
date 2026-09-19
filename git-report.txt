@@ -1,0 +1,23 @@
+=== STATUS ===
+## main...origin/main
+=== LOG ===
+57c921f docs: 简历与 JD 分析等文档
+0c306f5 init: go-learning workspace
+=== FILE COUNT ===
+51
+=== .git SIZE ===
+596K	.git
+=== MD FILES TRACKED ===
+PLAN-2026-10-Go求职冲刺.md
+W1-打卡表与简历自检.md
+notes/2026-08-05.md
+notes/2026-08-06.md
+notes/第三天-Goroutine.md
+notes/第四天-Context.md
+playground/p0-slice/CONCLUSION.md
+环境搭建-记录.md
+=== IDEA STILL TRACKED? ===
+27
+=== GOCACHE TRACKED? ===
+0
+0

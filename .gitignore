@@ -2,10 +2,12 @@
 .gocache/
 .gopath/
 *.exe
+*.test
+*.out
 bin/
 
 # IDE
 .idea/
 .vscode/
 *.swp
-*.md
+*.bak

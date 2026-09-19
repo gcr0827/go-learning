@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>郭超然 · 后端工程师 Go/PHP</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --primary: #1f4e79;
+    --text: #333;
+    --muted: #555;
+    --line: #2b5d8c;
+    --bg: #eef1f4;
+  }
+
+  body {
+    font-family: "Microsoft YaHei", "PingFang SC", "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+  }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 20px auto;
+    background: #fff;
+    padding: 13mm 15mm;
+    box-shadow: 0 2px 12px rgba(0,0,0,.12);
+  }
+
+  .header h1 {
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--primary);
+    letter-spacing: 3px;
+  }
+  .header .job-title {
+    font-size: 14px;
+    color: var(--text);
+    margin-top: 4px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #d9dee3;
+  }
+  .contact {
+    display: flex;
+    gap: 34px;
+    font-size: 12.5px;
+    color: var(--text);
+    padding: 8px 0 2px;
+  }
+  .contact b { font-weight: 700; }
+
+  section { margin-top: 16px; }
+  .section-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--primary);
+    padding-bottom: 5px;
+    border-bottom: 1.5px solid var(--line);
+    margin-bottom: 12px;
+  }
+
+  /* 技术栈：两列 label: values */
+  .skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 6px;
+    column-gap: 28px;
+    font-size: 13px;
+  }
+  .skills .row { display: flex; }
+  .skills .label {
+    flex: 0 0 64px;
+    font-weight: 700;
+    color: var(--text);
+  }
+  .skills .value { color: var(--text); }
+
+  .item { margin-bottom: 14px; }
+  .item-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 13.5px;
+  }
+  .item-head .name { font-weight: 700; }
+  .item-head .role { font-weight: 400; margin-left: 8px; }
+  .item-head .date { font-size: 12px; color: var(--muted); }
+
+  .item ul { margin: 5px 0 0 19px; }
+  .item li {
+    font-size: 13px;
+    margin-bottom: 2px;
+    text-align: justify;
+  }
+  .item li b { color: #222; }
+
+  .tech-line {
+    font-size: 12.5px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+
+  .edu-extra {
+    font-size: 12.5px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+
+  @media print {
+    body { background: #fff; }
+    .page { margin: 0; box-shadow: none; width: auto; min-height: auto; padding: 12mm 15mm; }
+  }
+  @page { size: A4; margin: 0; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- 头部 -->
+  <header class="header">
+    <h1>郭超然</h1>
+    <div class="job-title">高级后端工程师 · Go / PHP</div>
+    <div class="contact">
+      <span><b>手机</b>&nbsp; 15206121201</span>
+      <span><b>邮箱</b>&nbsp; guochaoran1996@163.com</span>
+      <span><b>城市</b>&nbsp; 上海</span>
+    </div>
+  </header>
+
+  <!-- 技术栈 -->
+  <section>
+    <div class="section-title">技术栈</div>
+    <div class="skills">
+      <div class="row"><span class="label">语言</span><span class="value">Go · PHP</span></div>
+      <div class="row"><span class="label">框架</span><span class="value">Gin · Laravel · Yii2 · Yaf</span></div>
+      <div class="row"><span class="label">队列</span><span class="value">AWS SQS · Kafka</span></div>
+      <div class="row"><span class="label">检索</span><span class="value">Elasticsearch</span></div>
+      <div class="row"><span class="label">数据库</span><span class="value">MySQL（分表 / 索引优化 / 事务）<br>Redis（缓存 / 分布式锁 / 队列）<br>MongoDB</span></div>
+      <div class="row"><span class="label">工程</span><span class="value">Docker · Nginx · Git · CI/CD</span></div>
+    </div>
+  </section>
+
+  <!-- 项目经验 -->
+  <section>
+    <div class="section-title">项目经验</div>
+
+    <div class="item">
+      <div class="item-head">
+        <div><span class="name">EPOS 点餐系统</span><span class="role">后端开发</span></div>
+        <div class="date">2025.08 — 至今</div>
+      </div>
+      <div class="tech-line">技术栈：Laravel · MySQL · Redis · AWS · GPT API</div>
+      <ul>
+        <li>负责<b>订单、菜品、门店、预约</b>核心模块的后端开发与业务迭代。</li>
+        <li>完成支付渠道Viva / Teya对接，处理支付回调的异步通知与幂等。</li>
+        <li>基于 <b>AWS SQS</b> 实现下单后的异步处理与通知（短信 / 邮件 / 打印 / 外卖平台推送），
+            将慢操作从主链路解耦；配置<b>死信队列与重试策略</b>兜底失败消息。</li>
+        <li>针对订单历史记录、交易流水等列表查询慢的问题，通过 SQL 优化与索引设计改善响应；
+          并负责订单相关表的<b>水平分表</b>设计与落地，应对订单数据量的持续增长。</li>
+        <li>接入大模型 API 实现智能客服问答：将门店与菜品数据组装为上下文，
+            处理调用超时、失败降级与多轮会话管理。</li>
+        <li>实现语音预约功能：基于 Whisper 完成语音转写、大模型解析预约意图，
+            自动生成预约单并校验时段冲突。</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-head">
+        <div><span class="name">煤矿信息化管理平台</span><span class="role">独立开发</span></div>
+        <div class="date">2025.01 — 2025.06</div>
+      </div>
+      <div class="tech-line">技术栈：Go · Gin · MongoDB · Redis · 消息队列</div>
+      <ul>
+        <li>独立完成从 0 到 1 的后端设计与开发，对接第三方接口采集，如：温度、湿度等环境指标。</li>
+        <li>基于采集数据实现<b>指标预警与数据概览</b>，支撑现场运维人员实时掌握设备状态。</li>
+        <li>负责与数据方、前端团队的接口联调，保证项目按期交付。</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-head">
+        <div><span class="name">数字化运维监控系统</span><span class="role">后端开发（Go）</span></div>
+        <div class="date">2023.07 — 2024.12</div>
+      </div>
+      <div class="tech-line">技术栈：Go · Redis · MySQL · Yaf</div>
+      <ul>
+        <li>负责数据采集服务，覆盖<b>几万台设备的分钟级数据采集</b>。</li>
+        <li>将原 PHP 串行采集逻辑以 <b>Go 重构</b>：使用 Goroutine + Channel 控制并发度，
+            配合超时与失败重试机制，避免单轮采集堆积影响下一轮调度。</li>
+        <li>对接企业微信、钉钉告警通知，将采集异常与指标超限推送到对应值班群。</li>
+        <li>优化生产环境列表查询性能，改善管理页面的加载体验。</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-head">
+        <div><span class="name">WMS 仓储管理系统</span><span class="role">后端开发（团队负责人）</span></div>
+        <div class="date">2021.04 — 2023.05</div>
+      </div>
+      <div class="tech-line">技术栈：PHP · Go · MySQL · Redis</div>
+      <ul>
+        <li>作为 5 人开发团队的负责人，负责功能开发、技术对接与<b>项目排期</b>。</li>
+        <li>负责<b>入库、出库、库存</b>核心模块的设计与实现，参与需求分析与评审。</li>
+        <li>将核心业务逻辑<b>封装为 Composer 组件包</b>，供多个内部项目复用，减少重复代码。</li>
+        <li>主导部分服务由 <b>PHP 向 Go 的重构</b>（含文件上传服务），提升处理性能。</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-head">
+        <div><span class="name">腾讯企点（企业级客服系统）</span><span class="role">后端开发</span></div>
+        <div class="date">2019.03 — 2021.03</div>
+      </div>
+      <div class="tech-line">技术栈：Yii2 · MySQL · Redis · Elasticsearch</div>
+      <ul>
+        <li>基于 Yii2 开发对外服务接口，与内部其他服务通信交互。</li>
+        <li>采用<b>适配器模式</b>对接不同服务商，提升代码复用率与扩展性。</li>
+        <li>针对海量会话数据实施<b>分表存储</b>，降低 MySQL 负担、提升查询效率。</li>
+        <li>使用 <b>Redis 分布式锁</b>处理并发场景下的数据一致性问题。</li>
+        <li>基于 Redis ZSET / LIST 实现<b>热词记录与搜索历史</b>功能。</li>
+        <li>引入 <b>Elasticsearch</b> 支持全文检索、关键词高亮与数据分析。</li>
+      </ul>
+    </div>
+
+<!--    <div class="item">-->
+<!--      <div class="item-head">-->
+<!--        <div><span class="name">广交会直播管理模块</span><span class="role">后端开发</span></div>-->
+<!--        <div class="date">2019.03 — 2021.03</div>-->
+<!--      </div>-->
+<!--      <div class="tech-line">技术栈：Yii2 · Redis · 消息队列 · MySQL</div>-->
+<!--      <ul>-->
+<!--        <li>负责直播管理模块的后端功能开发。</li>-->
+<!--        <li>使用<b>消息队列处理日志记录</b>，将日志写入从请求链路中解耦，降低高并发访问时的接口压力。</li>-->
+<!--      </ul>-->
+<!--    </div>-->
+  </section>
+
+
+  <!-- 工作经历 -->
+  <section>
+    <div class="section-title">工作经历</div>
+
+    <div class="item">
+      <div class="item-head">
+        <div><span class="name">上海新米汇智能科技有限公司</span><span class="role">软件开发</span></div>
+        <div class="date">2025.08 — 至今</div>
+      </div>
+      <ul>
+        <li>负责 EPOS 点餐系统（订单 / 菜品 / 门店 / 预约）的后端开发与迭代，含 AI 客服问答、
+            语音预约与第三方支付对接；团队后端 2 人。</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-head">
+        <div><span class="name">独立开发</span><span class="role">软件工程师</span></div>
+        <div class="date">2025.01 — 2025.06</div>
+      </div>
+      <ul>
+        <li>独立完成珂尔玛科技煤矿信息化管理平台的后端设计与开发，并主导与数据方、前端的对接。</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-head">
+        <div><span class="name">江苏智先生信息科技有限公司</span><span class="role">软件工程师</span></div>
+        <div class="date">2023.07 — 2024.12</div>
+      </div>
+      <ul>
+        <li>负责数字化运维监控系统的 Go 数据采集服务，并参与管理功能开发与第三方对接。</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-head">
+        <div><span class="name">上海黑焰医疗科技有限公司</span><span class="role">软件工程师</span></div>
+        <div class="date">2021.04 — 2023.05</div>
+      </div>
+      <ul>
+        <li>带领 5 人团队负责 WMS 仓储管理系统，覆盖需求分析、模块开发、技术对接与项目排期。</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-head">
+        <div><span class="name">上海汉得信息技术有限公司</span><span class="role">软件工程师</span></div>
+        <div class="date">2019.03 — 2021.03</div>
+      </div>
+      <ul>
+        <li>参与腾讯企点客服系统与广交会直播管理模块的后端开发与迭代。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 教育背景 -->
+  <section>
+    <div class="section-title">教育背景</div>
+    <div class="item" style="margin-bottom:0;">
+      <div class="item-head">
+        <div><span class="name">常州机电职业技术学院</span><span class="role">计算机网络应用 · 专科</span></div>
+        <div class="date">2015.09 — 2018.06</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 个人优势 -->
+  <section>
+    <div class="section-title">个人优势</div>
+    <ul class="strengths" style="margin-left:19px;">
+      <li style="font-size:13px;margin-bottom:2px;"><b>技术实践&nbsp;&nbsp;</b>6.5 年后端开发经验。自 2021 年起参与 PHP 服务向 Go 的迁移，2023–2024 负责 <b>Go 数据采集服务</b>，用 Goroutine + Channel 重构采集流水线，覆盖几万台设备的分钟级采集；具备分布式系统实践（Redis 分布式锁、水平分表、慢 SQL 调优）。</li>
+      <li style="font-size:13px;margin-bottom:2px;"><b>业务与架构&nbsp;&nbsp;</b>熟悉订单、库存、仓储、设备数据等业务链路；具备订单表水平分表、MySQL 分表与索引优化、缓存与消息队列在高并发场景下的落地经验。</li>
+      <li style="font-size:13px;margin-bottom:2px;"><b>团队与协作&nbsp;&nbsp;</b>带过 5 人开发团队，负责过项目排期与技术对接；注重编码规范与代码评审，能主导模块从设计到上线全流程。</li>
+    </ul>
+  </section>
+
+</div>
+</body>
+</html>
