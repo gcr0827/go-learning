@@ -1,6 +1,0 @@
-{
-  "app_name": "shop",
-  "port": 8080,
-  "timeout_sec": 30,
-  "debug": true,
-}
